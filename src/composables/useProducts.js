@@ -1,7 +1,7 @@
 import { ref, computed } from 'vue';
 import { fallbackProducts } from '../data/fallbackProducts';
 
-const API_URL = 'https://www.ivideo.com.tw/english/japan_wifi/get_stock_area.php?area=JP&api_key=FE68A502-CF1D-42B5-8E44-F84C2BCF872D';
+const API_URL = 'http://210.209.13.182:8000/api/products/wifi?country=japan';
 
 export function useProducts() {
   const products = ref([]);
@@ -25,6 +25,7 @@ export function useProducts() {
       
       if (data.success && Array.isArray(data.data)) {
         products.value = data.data;
+        console.log(data.data)
       } else {
         throw new Error('Invalid data format');
       }

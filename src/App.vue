@@ -26,6 +26,8 @@ import FeaturesSection from './components/FeaturesSection.vue';
 import AppFooter from './components/AppFooter.vue';
 import { useProducts } from './composables/useProducts';
 
+
+alert('hello')
 const { 
   filteredProducts, 
   isLoading, 
