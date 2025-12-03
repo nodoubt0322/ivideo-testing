@@ -47,8 +47,40 @@
           </a>
         </nav>
         
-        <!-- Search and Login -->
+        <!-- Theme Toggle & Actions -->
         <div class="hidden lg:flex items-center gap-3">
+          <!-- Theme Toggle Button -->
+          <button 
+            @click="toggleTheme" 
+            class="w-10 h-10 rounded-full hover:bg-white/10 flex items-center justify-center text-white transition-all hover:scale-110 active:scale-95 group relative overflow-hidden"
+            aria-label="切換主題"
+          >
+            <!-- Sun Icon (Light Mode) -->
+            <svg 
+              v-show="!isDark" 
+              xmlns="http://www.w3.org/2000/svg" 
+              class="h-5 w-5 transition-all duration-300 transform group-hover:rotate-45" 
+              fill="none" 
+              viewBox="0 0 24 24" 
+              stroke="currentColor"
+            >
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+            </svg>
+            <!-- Moon Icon (Dark Mode) -->
+            <svg 
+              v-show="isDark" 
+              xmlns="http://www.w3.org/2000/svg" 
+              class="h-5 w-5 transition-all duration-300 transform group-hover:rotate-12" 
+              fill="none" 
+              viewBox="0 0 24 24" 
+              stroke="currentColor"
+            >
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+            </svg>
+            <!-- Glow Effect -->
+            <div class="absolute inset-0 rounded-full bg-gradient-to-r from-yellow-400/0 via-yellow-400/20 to-yellow-400/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+          </button>
+          
           <button class="w-10 h-10 rounded-full hover:bg-white/10 flex items-center justify-center text-white transition-all" aria-label="搜尋">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
@@ -103,8 +135,10 @@
 
 <script setup>
 import { ref } from 'vue';
+import { useTheme } from '../composables/useTheme';
 
 const isMenuOpen = ref(false);
+const { isDark, toggleTheme } = useTheme();
 
 function toggleMenu() {
   isMenuOpen.value = !isMenuOpen.value;

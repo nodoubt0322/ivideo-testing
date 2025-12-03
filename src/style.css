@@ -18,6 +18,19 @@
   .glass-card {
     @apply backdrop-blur-xl bg-white/35 border border-white/45 shadow-glass-lg;
   }
+  
+  /* 深色模式下的玻璃效果 */
+  .dark .glass {
+    @apply bg-gray-800/40 border-gray-700/50;
+  }
+  
+  .dark .glass-strong {
+    @apply bg-gray-800/50 border-gray-700/60;
+  }
+  
+  .dark .glass-card {
+    @apply bg-gray-800/60 border-gray-700/70;
+  }
 }
 
 /* 增強文字可讀性的工具類 */
@@ -32,6 +45,19 @@
   
   .text-shadow-xl {
     text-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+  }
+  
+  /* 深色模式的文字陰影 */
+  .dark .text-shadow {
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+  }
+  
+  .dark .text-shadow-lg {
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+  }
+  
+  .dark .text-shadow-xl {
+    text-shadow: 0 6px 12px rgba(0, 0, 0, 0.8);
   }
 }
 
@@ -54,11 +80,24 @@
   background: rgba(24, 103, 192, 0.7);
 }
 
+/* 深色模式滾動條 */
+.dark ::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: rgba(100, 181, 246, 0.4);
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: rgba(100, 181, 246, 0.6);
+}
+
 /* Base styles - 優化背景漸層深度 */
 body {
   margin: 0;
   min-height: 100vh;
-  /* 加深背景色以增強對比度 */
+  /* 淺色模式 - 加深背景色以增強對比度 */
   background: linear-gradient(135deg, 
     #0a3d7a 0%, 
     #155a9c 25%, 
@@ -71,6 +110,19 @@ body {
   font-family: 'Noto Sans TC', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* 深色模式背景 */
+.dark body {
+  background: linear-gradient(135deg, 
+    #0a1929 0%, 
+    #1a237e 25%, 
+    #283593 50%,
+    #1b5e20 75%, 
+    #004d40 100%
+  );
+  color: #e0e0e0;
 }
 
 #app {
