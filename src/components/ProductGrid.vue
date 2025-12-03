@@ -8,10 +8,10 @@
           </svg>
           <span class="text-sm font-semibold text-white">精選方案</span>
         </div>
-        <h2 class="text-3xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-white via-primary-100 to-secondary-100 bg-clip-text text-transparent">
+        <h2 class="text-3xl md:text-5xl font-bold mb-4 text-white text-shadow-lg">
           熱門 WiFi 方案
         </h2>
-        <p class="text-white/80 text-lg max-w-2xl mx-auto">
+        <p class="text-white text-lg max-w-2xl mx-auto text-shadow">
           選擇最適合您的日本上網方案
         </p>
       </div>

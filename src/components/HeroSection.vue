@@ -18,11 +18,11 @@
         </div>
         
         <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
-          <span class="bg-gradient-to-r from-white via-primary-100 to-secondary-100 bg-clip-text text-transparent drop-shadow-lg">
+          <span class="text-white text-shadow-xl">
             日本 WiFi 機租借
           </span>
         </h1>
-        <p class="text-xl md:text-2xl text-white/90 mb-10 leading-relaxed max-w-2xl mx-auto drop-shadow-md">
+        <p class="text-xl md:text-2xl text-white mb-10 leading-relaxed max-w-2xl mx-auto text-shadow-lg">
           高速 5G/4G LTE 上網服務<br />讓您的日本之旅隨時保持連線
         </p>
         
@@ -47,20 +47,20 @@
         <!-- Stats - 數據展示 -->
         <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
           <div class="glass-card rounded-2xl p-6 hover:scale-105 transition-transform duration-300">
-            <div class="text-3xl md:text-4xl font-bold bg-gradient-to-br from-primary-300 to-primary-100 bg-clip-text text-transparent mb-2">5G</div>
-            <div class="text-sm text-white/80 font-medium">高速網路</div>
+            <p class="text-3xl md:text-4xl font-bold text-white mb-2 text-shadow-lg">99%</p>
+            <p class="text-sm text-white font-medium">客戶滿意度</p>
           </div>
-          <div class="glass-card rounded-2xl p-6 hover:scale-105 transition-transform duration-300" style="transition-delay: 50ms;">
-            <div class="text-3xl md:text-4xl font-bold bg-gradient-to-br from-secondary-300 to-secondary-100 bg-clip-text text-transparent mb-2">24/7</div>
-            <div class="text-sm text-white/80 font-medium">全天候支援</div>
+          <div class="glass-card rounded-2xl p-6 hover:scale-105 transition-transform duration-300">
+            <p class="text-3xl md:text-4xl font-bold text-white mb-2 text-shadow-lg">24小時</p>
+            <p class="text-sm text-white font-medium">線上客服</p>
           </div>
-          <div class="glass-card rounded-2xl p-6 hover:scale-105 transition-transform duration-300" style="transition-delay: 100ms;">
-            <div class="text-3xl md:text-4xl font-bold bg-gradient-to-br from-accent-400 to-accent-200 bg-clip-text text-transparent mb-2">∞</div>
-            <div class="text-sm text-white/80 font-medium">流量吃到飽</div>
+          <div class="glass-card rounded-2xl p-6 hover:scale-105 transition-transform duration-300">
+            <p class="text-3xl md:text-4xl font-bold text-white mb-2 text-shadow-lg">5G</p>
+            <p class="text-sm text-white font-medium">高速連線</p>
           </div>
-          <div class="glass-card rounded-2xl p-6 hover:scale-105 transition-transform duration-300" style="transition-delay: 150ms;">
-            <div class="text-3xl md:text-4xl font-bold bg-gradient-to-br from-primary-300 to-secondary-200 bg-clip-text text-transparent mb-2">10+</div>
-            <div class="text-sm text-white/80 font-medium">年經驗</div>
+          <div class="glass-card rounded-2xl p-6 hover:scale-105 transition-transform duration-300">
+            <p class="text-3xl md:text-4xl font-bold text-white mb-2 text-shadow-lg">吃到飽</p>
+            <p class="text-sm text-white font-medium">流量無上限</p>
           </div>
         </div>
       </div>

@@ -8,11 +8,11 @@
           </svg>
           <span class="text-sm font-semibold text-white">服務優勢</span>
         </div>
-        <h2 class="text-3xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-white via-primary-100 to-secondary-100 bg-clip-text text-transparent">
+        <h2 class="text-3xl md:text-5xl font-bold mb-4 text-white text-shadow-lg">
           服務特色
         </h2>
-        <p class="text-white/80 text-lg max-w-2xl mx-auto">
-          為什麼選擇 iVideo WiFi 機租借服務
+        <p class="text-white text-lg max-w-2xl mx-auto text-shadow">
+          提供最優質的日本 WiFi 租借服務
         </p>
       </div>
       

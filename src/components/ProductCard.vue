@@ -29,7 +29,8 @@
     
     <!-- Product Info -->
     <div class="p-6 bg-gradient-to-b from-white/5 to-transparent">
-      <h3 class="text-lg font-semibold mb-4 text-white min-h-[3rem] leading-tight" v-html="cleanTitle(product.title)"></h3>
+      <!-- Title -->
+      <h3 class="text-xl font-bold text-white mb-3 line-clamp-2 min-h-[3.5rem] text-shadow" v-html="cleanTitle(product.title)"></h3>
       
       <!-- Pricing -->
       <div class="space-y-3 mb-6">

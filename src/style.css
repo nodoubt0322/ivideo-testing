@@ -5,18 +5,33 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Custom glassmorphism utility */
+/* 優化後的玻璃效果 - 增強背景不透明度以提高文字可讀性 */
 @layer utilities {
   .glass {
-    @apply backdrop-blur-md bg-white/10 border border-white/20 shadow-glass;
+    @apply backdrop-blur-xl bg-white/15 border border-white/25 shadow-glass;
   }
   
   .glass-strong {
-    @apply backdrop-blur-lg bg-white/20 border border-white/30 shadow-glass-lg;
+    @apply backdrop-blur-xl bg-white/25 border border-white/35 shadow-glass-lg;
   }
   
   .glass-card {
-    @apply backdrop-blur-xl bg-white/30 border border-white/40 shadow-glass-lg;
+    @apply backdrop-blur-xl bg-white/35 border border-white/45 shadow-glass-lg;
+  }
+}
+
+/* 增強文字可讀性的工具類 */
+@layer utilities {
+  .text-shadow {
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  }
+  
+  .text-shadow-lg {
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  }
+  
+  .text-shadow-xl {
+    text-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
   }
 }
 
@@ -39,20 +54,20 @@
   background: rgba(24, 103, 192, 0.7);
 }
 
-/* Base styles */
+/* Base styles - 優化背景漸層深度 */
 body {
   margin: 0;
   min-height: 100vh;
-  /* iVideo 品牌色漸層背景 - 藍色到青綠色 */
+  /* 加深背景色以增強對比度 */
   background: linear-gradient(135deg, 
-    #0d47a1 0%, 
-    #1867c0 25%, 
-    #42a5f5 50%,
-    #48a5a6 75%, 
-    #338182 100%
+    #0a3d7a 0%, 
+    #155a9c 25%, 
+    #2196f3 50%,
+    #3d8a8e 75%, 
+    #2b6b6d 100%
   );
   background-attachment: fixed;
-  color: #212121;
+  color: #ffffff;
   font-family: 'Noto Sans TC', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
