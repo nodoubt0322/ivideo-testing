@@ -11,8 +11,8 @@ export function useTheme() {
     if (savedTheme) {
       isDark.value = savedTheme === 'dark';
     } else {
-      // 如果沒有保存的設置，使用系統偏好
-      isDark.value = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      // 如果沒有保存的設置，預設使用淺色模式
+      isDark.value = false;
     }
     
     applyTheme();
