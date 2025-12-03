@@ -2,59 +2,75 @@
   <section class="relative py-20 md:py-32 overflow-hidden">
     <!-- Animated Background Shapes -->
     <div class="absolute inset-0 overflow-hidden pointer-events-none">
-      <div class="absolute top-20 left-10 w-64 h-64 bg-purple-500/20 rounded-full blur-3xl animate-pulse-slow"></div>
-      <div class="absolute bottom-20 right-10 w-96 h-96 bg-pink-500/20 rounded-full blur-3xl animate-pulse-slow"></div>
+      <div class="absolute top-20 left-10 w-64 h-64 bg-primary-400/20 rounded-full blur-3xl animate-pulse-slow"></div>
+      <div class="absolute bottom-20 right-10 w-96 h-96 bg-secondary-400/20 rounded-full blur-3xl animate-pulse-slow" style="animation-delay: 1s;"></div>
+      <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-72 h-72 bg-accent-400/15 rounded-full blur-3xl animate-pulse-slow" style="animation-delay: 2s;"></div>
     </div>
     
     <div class="container mx-auto px-4 relative z-10">
-      <div class="text-center max-w-4xl mx-auto">
-        <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">
-          <span class="bg-gradient-to-r from-purple-300 via-pink-300 to-purple-300 bg-clip-text text-transparent">
+      <div class="text-center max-w-4xl mx-auto animate-fade-in-up">
+        <!-- 標籤徽章 -->
+        <div class="inline-flex items-center gap-2 px-4 py-2 mb-6 bg-gradient-to-r from-primary-500/20 to-secondary-500/20 border border-primary-300/30 rounded-full backdrop-blur-sm">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-accent-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+          </svg>
+          <span class="text-sm font-semibold text-white">專業日本 WiFi 租借服務</span>
+        </div>
+        
+        <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
+          <span class="bg-gradient-to-r from-white via-primary-100 to-secondary-100 bg-clip-text text-transparent drop-shadow-lg">
             日本 WiFi 機租借
           </span>
         </h1>
-        <p class="text-xl md:text-2xl text-purple-100 mb-8 leading-relaxed">
-          高速 5G/4G LTE 上網服務，讓您的日本之旅隨時保持連線
+        <p class="text-xl md:text-2xl text-white/90 mb-10 leading-relaxed max-w-2xl mx-auto drop-shadow-md">
+          高速 5G/4G LTE 上網服務<br />讓您的日本之旅隨時保持連線
         </p>
         
-        <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+        <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
           <a 
             href="#products" 
-            class="glass-strong px-8 py-4 rounded-full text-lg font-semibold text-white hover:scale-105 transition-transform inline-flex items-center space-x-2"
+            class="group glass-strong px-8 py-4 rounded-full text-lg font-semibold text-white hover:scale-105 transition-all duration-300 inline-flex items-center space-x-2 bg-gradient-to-r from-primary-500/40 to-secondary-500/40 hover:shadow-glass-lg"
           >
             <span>查看方案</span>
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
             </svg>
           </a>
           <a 
             href="#features" 
-            class="glass px-8 py-4 rounded-full text-lg font-semibold text-white hover:scale-105 transition-transform"
+            class="glass px-8 py-4 rounded-full text-lg font-semibold text-white hover:scale-105 hover:glass-strong transition-all duration-300"
           >
             了解更多
           </a>
         </div>
         
-        <!-- Stats -->
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16">
-          <div class="glass rounded-2xl p-6">
-            <div class="text-3xl md:text-4xl font-bold text-purple-300 mb-2">5G</div>
-            <div class="text-sm text-purple-100">高速網路</div>
+        <!-- Stats - 數據展示 -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+          <div class="glass-card rounded-2xl p-6 hover:scale-105 transition-transform duration-300">
+            <div class="text-3xl md:text-4xl font-bold bg-gradient-to-br from-primary-300 to-primary-100 bg-clip-text text-transparent mb-2">5G</div>
+            <div class="text-sm text-white/80 font-medium">高速網路</div>
           </div>
-          <div class="glass rounded-2xl p-6">
-            <div class="text-3xl md:text-4xl font-bold text-pink-300 mb-2">24/7</div>
-            <div class="text-sm text-purple-100">全天候支援</div>
+          <div class="glass-card rounded-2xl p-6 hover:scale-105 transition-transform duration-300" style="transition-delay: 50ms;">
+            <div class="text-3xl md:text-4xl font-bold bg-gradient-to-br from-secondary-300 to-secondary-100 bg-clip-text text-transparent mb-2">24/7</div>
+            <div class="text-sm text-white/80 font-medium">全天候支援</div>
           </div>
-          <div class="glass rounded-2xl p-6">
-            <div class="text-3xl md:text-4xl font-bold text-purple-300 mb-2">∞</div>
-            <div class="text-sm text-purple-100">流量吃到飽</div>
+          <div class="glass-card rounded-2xl p-6 hover:scale-105 transition-transform duration-300" style="transition-delay: 100ms;">
+            <div class="text-3xl md:text-4xl font-bold bg-gradient-to-br from-accent-400 to-accent-200 bg-clip-text text-transparent mb-2">∞</div>
+            <div class="text-sm text-white/80 font-medium">流量吃到飽</div>
           </div>
-          <div class="glass rounded-2xl p-6">
-            <div class="text-3xl md:text-4xl font-bold text-pink-300 mb-2">10+</div>
-            <div class="text-sm text-purple-100">年經驗</div>
+          <div class="glass-card rounded-2xl p-6 hover:scale-105 transition-transform duration-300" style="transition-delay: 150ms;">
+            <div class="text-3xl md:text-4xl font-bold bg-gradient-to-br from-primary-300 to-secondary-200 bg-clip-text text-transparent mb-2">10+</div>
+            <div class="text-sm text-white/80 font-medium">年經驗</div>
           </div>
         </div>
       </div>
+    </div>
+    
+    <!-- 滾動提示 -->
+    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce-slow">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white/60" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+      </svg>
     </div>
   </section>
 </template>
