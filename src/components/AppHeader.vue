@@ -16,28 +16,59 @@
         </div>
         
         <!-- Desktop Navigation -->
-        <nav class="hidden md:flex items-center space-x-8">
-          <a href="#products" class="nav-link text-white hover:text-primary-200 transition-all duration-300 font-medium relative group">
-            產品方案
+        <nav class="hidden lg:flex items-center space-x-6 xl:space-x-8">
+          <a href="#latest" class="nav-link text-white hover:text-primary-200 transition-all duration-300 font-medium relative group text-sm">
+            最新活動
             <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-primary-300 to-secondary-300 group-hover:w-full transition-all duration-300"></span>
           </a>
-          <a href="#features" class="nav-link text-white hover:text-primary-200 transition-all duration-300 font-medium relative group">
-            服務特色
+          <a href="#buy" class="nav-link text-white hover:text-primary-200 transition-all duration-300 font-medium relative group text-sm">
+            購買服務
             <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-primary-300 to-secondary-300 group-hover:w-full transition-all duration-300"></span>
           </a>
-          <a href="#about" class="nav-link text-white hover:text-primary-200 transition-all duration-300 font-medium relative group">
-            關於我們
+          <a href="#rental" class="nav-link text-white hover:text-primary-200 transition-all duration-300 font-medium relative group text-sm">
+            租借服務
             <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-primary-300 to-secondary-300 group-hover:w-full transition-all duration-300"></span>
           </a>
-          <a href="#contact" class="glass-strong px-6 py-2.5 rounded-full text-white font-semibold hover:scale-105 hover:shadow-glass-lg transition-all duration-300 bg-gradient-to-r from-primary-500/30 to-secondary-500/30">
-            立即租借
+          <a href="#unlimited" class="nav-link text-white hover:text-primary-200 transition-all duration-300 font-medium relative group text-sm">
+            無限吃到飽
+            <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-primary-300 to-secondary-300 group-hover:w-full transition-all duration-300"></span>
+          </a>
+          <a href="#longterm" class="nav-link text-white hover:text-primary-200 transition-all duration-300 font-medium relative group text-sm">
+            長期方案
+            <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-primary-300 to-secondary-300 group-hover:w-full transition-all duration-300"></span>
+          </a>
+          <a href="#products" class="nav-link text-white hover:text-primary-200 transition-all duration-300 font-medium relative group text-sm">
+            產品介紹
+            <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-primary-300 to-secondary-300 group-hover:w-full transition-all duration-300"></span>
+          </a>
+          <a href="#member" class="nav-link text-white hover:text-primary-200 transition-all duration-300 font-medium relative group text-sm">
+            會員中心
+            <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-primary-300 to-secondary-300 group-hover:w-full transition-all duration-300"></span>
           </a>
         </nav>
+        
+        <!-- Search and Login -->
+        <div class="hidden lg:flex items-center gap-3">
+          <button class="w-10 h-10 rounded-full hover:bg-white/10 flex items-center justify-center text-white transition-all" aria-label="搜尋">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+            </svg>
+          </button>
+          <button class="w-10 h-10 rounded-full hover:bg-white/10 flex items-center justify-center text-white transition-all relative" aria-label="購物車">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+            </svg>
+            <span class="absolute -top-1 -right-1 w-5 h-5 bg-accent-500 text-white text-xs rounded-full flex items-center justify-center font-bold">4</span>
+          </button>
+          <button class="glass-strong px-5 py-2 rounded-full text-white font-medium hover:scale-105 hover:shadow-glass-lg transition-all duration-300 bg-gradient-to-r from-accent-500/60 to-accent-600/60 text-sm">
+            登入
+          </button>
+        </div>
         
         <!-- Mobile Menu Button -->
         <button 
           @click="toggleMenu" 
-          class="md:hidden glass-strong p-2 rounded-lg hover:scale-105 transition-transform"
+          class="lg:hidden glass-strong p-2 rounded-lg hover:scale-105 transition-transform"
           aria-label="Toggle menu"
         >
           <svg v-if="!isMenuOpen" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -52,14 +83,19 @@
       <!-- Mobile Navigation -->
       <nav 
         v-show="isMenuOpen" 
-        class="md:hidden pb-4 space-y-3 animate-fade-in-up"
+        class="lg:hidden pb-4 space-y-2 animate-fade-in-up"
       >
-        <a href="#products" @click="closeMenu" class="block text-white hover:text-primary-200 transition-colors font-medium py-2 px-4 rounded-lg hover:bg-white/5">產品方案</a>
-        <a href="#features" @click="closeMenu" class="block text-white hover:text-primary-200 transition-colors font-medium py-2 px-4 rounded-lg hover:bg-white/5">服務特色</a>
-        <a href="#about" @click="closeMenu" class="block text-white hover:text-primary-200 transition-colors font-medium py-2 px-4 rounded-lg hover:bg-white/5">關於我們</a>
-        <a href="#contact" @click="closeMenu" class="block glass-strong px-6 py-2.5 rounded-full text-white font-semibold text-center hover:scale-105 transition-transform bg-gradient-to-r from-primary-500/30 to-secondary-500/30">
-          立即租借
-        </a>
+        <a href="#latest" @click="closeMenu" class="block text-white hover:text-primary-200 transition-colors font-medium py-2 px-4 rounded-lg hover:bg-white/5 text-sm">最新活動</a>
+        <a href="#buy" @click="closeMenu" class="block text-white hover:text-primary-200 transition-colors font-medium py-2 px-4 rounded-lg hover:bg-white/5 text-sm">購買服務</a>
+        <a href="#rental" @click="closeMenu" class="block text-white hover:text-primary-200 transition-colors font-medium py-2 px-4 rounded-lg hover:bg-white/5 text-sm">租借服務</a>
+        <a href="#unlimited" @click="closeMenu" class="block text-white hover:text-primary-200 transition-colors font-medium py-2 px-4 rounded-lg hover:bg-white/5 text-sm">無限吃到飽</a>
+        <a href="#longterm" @click="closeMenu" class="block text-white hover:text-primary-200 transition-colors font-medium py-2 px-4 rounded-lg hover:bg-white/5 text-sm">長期方案</a>
+        <a href="#products" @click="closeMenu" class="block text-white hover:text-primary-200 transition-colors font-medium py-2 px-4 rounded-lg hover:bg-white/5 text-sm">產品介紹</a>
+        <a href="#member" @click="closeMenu" class="block text-white hover:text-primary-200 transition-colors font-medium py-2 px-4 rounded-lg hover:bg-white/5 text-sm">會員中心</a>
+        <div class="pt-3 border-t border-white/10 flex gap-3 px-4">
+          <button class="glass-strong px-5 py-2 rounded-full text-white font-medium flex-1 text-sm">搜尋</button>
+          <button class="glass-strong px-5 py-2 rounded-full text-white font-medium bg-gradient-to-r from-accent-500/60 to-accent-600/60 flex-1 text-sm">登入</button>
+        </div>
       </nav>
     </div>
   </header>
