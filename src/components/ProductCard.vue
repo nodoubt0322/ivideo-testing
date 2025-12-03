@@ -27,7 +27,7 @@
     <!-- Product Info -->
     <div class="p-6">
       <!-- Title -->
-      <h3 class="text-lg font-bold text-gray-900 mb-4 line-clamp-2 min-h-[3.5rem] leading-snug" v-html="cleanTitle(product.title)"></h3>
+      <h3 class="text-lg font-bold text-gray-900 dark:!text-white dark:drop-shadow-[0_0_8px_rgba(255,255,255,0.3)] mb-4 line-clamp-2 min-h-[3.5rem] leading-snug" v-html="cleanTitle(product.title)"></h3>
       
       <!-- Pricing Cards - 重新設計 -->
       <div class="space-y-2.5 mb-5">
